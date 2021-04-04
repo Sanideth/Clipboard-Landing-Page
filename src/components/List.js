@@ -1,20 +1,19 @@
 const items = [
   "FAQs",
-  "Contact Us",
   "Privacy Policy",
-  "Press Kit",
   "Install Guide",
+  "Contact Us",
+  "Press Kit",
 ];
 
 const List = (props) => {
   return (
     <ul className={`${props.className}__list`}>
       {items.map((item, index) => (
-        <li className={`${props.className}__list-item`}>
+        <li className={`${props.className}__list-item`} key={index}>
           <a
             href="https://github.com/Sanideth"
             className={`${props.className}__list-link`}
-            key={index}
           >
             {item}
           </a>
