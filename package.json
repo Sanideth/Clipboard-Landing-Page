@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:sass": "node-sass src/sass/main.scss src/App.css -w"
+    "watch:sass": "node-sass src/sass/main.scss src/App.css -w",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" src/css/App.css -o src/css/App.prefixed.css"
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +38,9 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "autoprefixer": "^10.2.5",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1"
   }
 }
