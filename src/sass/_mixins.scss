@@ -1,0 +1,17 @@
+@mixin section-padding {
+  padding: 5rem 2rem;
+}
+
+@mixin heading {
+  text-align: center;
+  width: 40%;
+  margin-bottom: 3rem;
+  @media only screen and (max-width: $bp-small) {
+    width: 65%;
+  }
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
