@@ -1,10 +1,22 @@
-
-import './App.css';
+import "./App.css";
+import Header from "./layout/Header";
+import Tracking from "./layout/Tracking";
+import Access from "./layout/Access";
+import Tools from "./layout/Tools";
+import Outro from "./layout/Outro";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <Header />
+      <main className="main">
+        <Tracking />
+        <Access />
+        <Tools />
+        <Outro />
+      </main>
+      <Footer />
     </div>
   );
 }
