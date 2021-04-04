@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.prefixed.css";
 import Header from "./layout/Header";
 import Tracking from "./layout/Tracking";
 import Access from "./layout/Access";
