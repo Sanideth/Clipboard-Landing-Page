@@ -14,51 +14,71 @@ const imageArr = [srcGoogle, srcIbm, srcMicrosoft, srcHp, srcVectorGraphics];
 const Tools = () => {
   return (
     <section className="section-tools">
-      <div className="section-tools__heading-container">
-        <Heading
-          tag="h2"
-          headingClassName="heading-secondary"
-          text="Supercharge your workflow"
-          paragraphClassName="paragraph-secondary"
-          paragraphText="We’ve got the tools to boost your productivity."
-        />
-      </div>
-      <div className="section-tools__examples">
-        <div className="section-tools__example">
-          <Image src={srcBlacklistIcon} altText="Blacklist Icon" />
+      <div className="container">
+        <div className="section-tools__heading-container">
           <Heading
-            tag="h3"
-            headingClassName="heading-tertiary"
-            text="Create blacklists"
-            paragraphClassName="paragraph-tertiary"
-            paragraphText="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
+            tag="h2"
+            headingClassName="heading-secondary"
+            text="Supercharge your workflow"
+            paragraphClassName="paragraph-secondary"
+            paragraphText="We’ve got the tools to boost your productivity."
           />
         </div>
-        <div className="section-tools__example">
-          <Image src={srcTextIcon} altText="Text Icon" />
-          <Heading
-            tag="h3"
-            headingClassName="heading-tertiary"
-            text="Plain text snippets"
-            paragraphClassName="paragraph-tertiary"
-            paragraphText="Remove unwanted formatting from copied text for a consistent look."
-          />
+        <div className="section-tools__examples">
+          <div className="section-tools__example">
+            <Image
+              src={srcBlacklistIcon}
+              altText="Blacklist Icon"
+              className="section-tools__img"
+            />
+            <Heading
+              tag="h3"
+              headingClassName="heading-tertiary"
+              text="Create blacklists"
+              paragraphClassName="paragraph-tertiary"
+              paragraphText="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
+            />
+          </div>
+          <div className="section-tools__example">
+            <Image
+              src={srcTextIcon}
+              altText="Text Icon"
+              className="section-tools__img"
+            />
+            <Heading
+              tag="h3"
+              headingClassName="heading-tertiary"
+              text="Plain text snippets"
+              paragraphClassName="paragraph-tertiary"
+              paragraphText="Remove unwanted formatting from copied text for a consistent look."
+            />
+          </div>
+          <div className="section-tools__example">
+            <Image
+              src={srcPreviewIcon}
+              altText="Preview Icon"
+              className="section-tools__img"
+            />
+            <Heading
+              tag="h3"
+              headingClassName="heading-tertiary"
+              text="Sneak preview"
+              paragraphClassName="paragraph-tertiary"
+              paragraphText="Quick preview of all snippets on your Clipboard for easy access."
+            />
+          </div>
         </div>
-        <div className="section-tools__example">
-          <Image src={srcPreviewIcon} altText="Preview Icon" />
-          <Heading
-            tag="h3"
-            headingClassName="heading-tertiary"
-            text="Sneak preview"
-            paragraphClassName="paragraph-tertiary"
-            paragraphText="Quick preview of all snippets on your Clipboard for easy access."
-          />
+        <div className="section-tools__partners">
+          {imageArr.map((image, index) => (
+            <div className="section-tools__partner" key={index}>
+              <Image
+                src={image}
+                altText="Partner Icon"
+                className="section-tools__partner-img"
+              />
+            </div>
+          ))}
         </div>
-      </div>
-      <div className="section-tools__partners">
-        {imageArr.map((image, index) => (
-          <Image src={image} altText="Partner Icon" key={index} />
-        ))}
       </div>
     </section>
   );
