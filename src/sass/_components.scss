@@ -1,0 +1,41 @@
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.cyan {
+  background-color: $color-cyan;
+  box-shadow: 0 0.5rem 2rem rgba(38, 186, 164, 0.2);
+}
+
+.blue {
+  background-color: $color-blue;
+  box-shadow: 0 0.5rem 2rem rgba(97, 115, 255, 0.2);
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+}
+
+.heading-main,
+.heading-secondary,
+.heading-tertiary {
+  color: $color-grey-dark;
+}
+
+.heading-container {
+  text-align: center;
+  width: 40%;
+  margin-bottom: 2rem;
+}
+
+.social-media {
+  width: 2rem;
+  height: 2rem;
+  fill: $color-grey-dark;
+  transition: all 0.2s;
+
+  &:hover {
+    fill: $color-cyan;
+  }
+}

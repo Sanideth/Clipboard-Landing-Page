@@ -4,4 +4,219 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("/src/img/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media only screen and (max-width: $bp-medium) {
+    background-image: url("/src/img/bg-header-mobile.png");
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    height: auto;
+    padding-top: 7rem;
+    margin-bottom: 15rem;
+  }
+  &__logo-container {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  &__heading-container {
+    @include heading;
+    margin-right: auto;
+    margin-left: auto;
+    width: 65%;
+  }
+  &__button-container {
+    text-align: center;
+  }
+}
+
+.section-tracking {
+  padding-bottom: 5rem;
+  @media only screen and (max-width: $bp-small) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  &__heading-container {
+    @include heading;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7rem;
+  }
+  &__image-container {
+    overflow: hidden;
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__img {
+    transform: translateX(-3rem);
+    width: 100%;
+    @media only screen and (max-width: $bp-small) {
+      transform: translateX(0);
+    }
+  }
+  &__content-container {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+  &__content-text-container {
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
+  }
+  &__content-heading-container {
+    width: 60%;
+    @include center;
+  }
+}
+
+.section-access {
+  @include section-padding;
+  &__heading-container {
+    @include heading;
+    @include center;
+    margin-bottom: 8rem;
+  }
+
+  &__img {
+    display: block;
+    width: 70%;
+    @include center;
+  }
+}
+
+.section-tools {
+  @include section-padding;
+
+  &__heading-container {
+    @include heading;
+    @include center;
+    margin-bottom: 10rem;
+  }
+
+  &__examples {
+    display: flex;
+    margin-bottom: 20rem;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      margin-bottom: 10rem;
+    }
+  }
+  &__example {
+    flex-basis: 30%;
+    text-align: center;
+    @media only screen and (max-width: $bp-small) {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  &__partners {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+  &__partner {
+    flex-basis: 15%;
+    @media only screen and (max-width: $bp-small) {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  &__partner-img {
+    width: 100%;
+  }
+}
+
+.section-outro {
+  @include section-padding;
+
+  &__heading-container {
+    @include heading;
+    @include center;
+    width: 60%;
+    margin-bottom: 5rem;
+  }
+
+  &__button-container {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+}
+
+.footer {
+  background-color: #eee;
+  padding: 2rem;
+  &__logo-container {
+    margin-right: auto;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    height: 5rem;
+    width: 5rem;
+  }
+  &__list-container {
+    width: 50%;
+    margin-right: auto;
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__list-item {
+    flex-basis: 30%;
+    margin-bottom: 2rem;
+    margin-right: 0.5rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    }
+  }
+  &__list-link {
+    color: $color-grey-dark;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-cyan;
+    }
+  }
+  &__social-media-container {
+    display: flex;
+    align-items: center;
+    margin-right: 4.25rem;
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    }
+  }
 }

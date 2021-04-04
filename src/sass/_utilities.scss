@@ -1,0 +1,14 @@
+// display flex
+.u-fl {
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
